@@ -18,7 +18,9 @@ data2 <- subset(data, data$Date == "2007-02-01" | data$Date == "2007-02-02")
 # Open the png device and plot the graph - do not forget to call dev.off() !!!
 
 png(filename = 'Plot4.png', width = 480, height = 480, units = 'px')
-par(mfrow = c(2, 2), bg = "transparent") #backgroun set to transparent as in dir 'figure'
+par(mfrow = c(2, 2)) # background could be set to transparent as in dir 'figure'
+# with par(bg="transparent") but it is not straightforward to see in the github
+# directory so I leave it in "white"
 
 # Sub plot 1
 plot( data2$Time,data2$Global_active_power,type="l" , xlab = "",
